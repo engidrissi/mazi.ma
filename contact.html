@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAZI - المشاريع</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="favicon.png">
+</head>
+<body>
+    <!-- نفس الهيدر من index.html -->
+    <header>
+        <a href="index.html" class="logo">
+            <img src="mazi-logo.png" alt="MAZI Logo"> MAZI
+        </a>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="projects.html">المشاريع</a></li>
+                <li><a href="gallery.html">المعرض</a></li>
+                <li><a href="designers.html">المصممون</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+                
+                <li class="dropdown">
+                    <button class="dropdown-btn">
+                        <img src="translate.png" alt="ترجمة" style="height: 20px; margin-left: 5px;">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#" onclick="changeLanguage('en')">English</a>
+                        <a href="#" onclick="changeLanguage('fr')">Français</a>
+                        <a href="#" onclick="changeLanguage('de')">Deutsch</a>
+                        <a href="#" onclick="changeLanguage('es')">Español</a>
+                    </div>
+                </li>
+                
+                <li class="dropdown">
+                    <button class="dropdown-btn">
+                        <img src="user.png" alt="حسابي" style="height: 20px; margin-left: 5px;">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="login.html">تسجيل الدخول</a>
+                        <a href="signup.html">إنشاء حساب</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="main-content">
+        <h1 class="page-title">مشاريعنا</h1>
+        <p>هنا يمكنك عرض جميع مشاريعنا المتميزة.</p>
+        
+        <!-- محتوى الصفحة -->
+        <div style="margin-top: 2rem;">
+            <p>سيتم عرض المشاريع هنا...</p>
+        </div>
+    </section>
+    
+    <!-- نفس الفوتر من index.html -->
+    <footer>
+        <div class="footer-section">
+            <h3>تابعنا على</h3>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i> فيسبوك</a>
+                <a href="#"><i class="fab fa-twitter"></i> تويتر</a>
+                <a href="#"><i class="fab fa-instagram"></i> إنستغرام</a>
+                <a href="#"><i class="fab fa-linkedin"></i> لينكد إن</a>
+            </div>
+        </div>
+        
+        <div class="footer-section">
+            <h3>روابط سريعة</h3>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="projects.html">المشاريع</a></li>
+                <li><a href="gallery.html">المعرض</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+                <li><a href="designers.html">المصممون</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h3>اللغات</h3>
+            <ul>
+                <li><a href="#" onclick="changeLanguage('ar')">العربية</a></li>
+                <li><a href="#" onclick="changeLanguage('en')">English</a></li>
+                <li><a href="#" onclick="changeLanguage('fr')">Français</a></li>
+                <li><a href="#" onclick="changeLanguage('de')">Deutsch</a></li>
+                <li><a href="#" onclick="changeLanguage('es')">Español</a></li>
+            </ul>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 MAZI. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+    
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+    
+    <script>
+        // نفس السكريبت من index.html
+        function changeLanguage(lang) {
+            alert('سيتم تغيير اللغة إلى ' + lang);
+        }
+        
+        document.querySelector('.back-to-top').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+    </script>
+</body>
+</html>

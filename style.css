@@ -1,0 +1,323 @@
+/* ملف CSS الرئيسي المحدث */
+:root {
+    --primary-color: #011f3d;
+    --secondary-color: #ff6b6b;
+    --light-color: #ecf0f1;
+    --dark-color: #001529;
+    --text-color: #333;
+    --text-light: #7f8c8d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: var(--text-color);
+    line-height: 1.6;
+    padding-top: 80px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 500;
+    padding: 0.5rem 0;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px;
+}
+
+.dropdown-content a {
+    color: var(--text-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: var(--secondary-color);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.dropdown-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.dropdown-btn i {
+    margin-left: 5px;
+}
+
+/* Main Content Styles */
+.main-content {
+    padding: 2rem;
+    flex: 1;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-image {
+    height: 200px;
+    background-color: #ddd;
+    background-size: cover;
+    background-position: center;
+}
+
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-info h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+.price {
+       
+        color: rgb(10, 123, 21);
+    }
+}
+
+.project-info p {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #011f3d;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    margin-bottom: 1.5rem;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+    color: #ff6b6b;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #ff6b6b;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    display: inline-block;
+}
+
+.footer-section ul li a:hover {
+    color: #ff6b6b;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #ff6b6b;
+}
+
+.copyright {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background-color: var(--secondary-color);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+}
+
+.back-to-top:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+/* Language Flags */
+.flag-icon {
+    margin-left: 8px;
+    font-size: 1.2rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .logo {
+        margin-bottom: 1rem;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin: 0.5rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+    
+    body {
+        padding-top: 140px;
+    }
+}

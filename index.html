@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAZI - مشاريعنا</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="favicon.png">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+        <img id="230" src="bag.png" alt="Description">
+      
+    
+    <section class="main-content">
+        <h1 class="page-title">ابحث عما تحتاجه</h1>
+        <p>تصفح مجموعتنا الواسعة من المركبات والخدمات المصممة خصيصًا لتلبية احتياجاتك</p>
+        
+        <div class="project-container">
+            <div class="project-card">
+                <div class="project-image" style="background-image: url('buyacar.png');"></div>
+                <div class="project-info">
+                    <h3 style="display: flex; justify-content: space-between; direction: rtl;">
+                        شراء سيارة 
+                        <span class="price">تبدأ من 15,000 درهم</span>
+                      </h3>
+                    <p>اعثر على سيارتك المثالية من مجموعة سياراتنا الفاخرة.</p>
+                    <a href="#" class="btn">عرض السيارات</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-image" style="background-image: url('renracar.png');"></div>
+                <div class="project-info">
+                    <h3 style="display: flex; justify-content: space-between; direction: rtl;">
+                        كراء سيارة
+                        <span class="price"> من 200 درهم/يوم</span>
+                      </h3>
+                    <p>خيارات إيجار مرنة لأي مناسبة أو رحلة.</p>
+                    <a href="#" class="btn">عرض السيارات</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-image" style="background-image: url('buyamotor.png');"></div>
+                <div class="project-info">
+                    <h3 style="display: flex; justify-content: space-between; direction: rtl;">
+                        شراء دراجة نارية
+                        <span class="price">تبدأ من 5,000 درهم</span>
+                      </h3>
+                      
+                      
+                    <p>استكشف مجموعتنا من الدراجات النارية الأنيقة والقوية.</p>
+                    <a href="#" class="btn">عرض السيارات</a>
+                   
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image" style="background-image: url('driver.png');"></div>
+                <div class="project-info">
+                    <h3 style="display: flex; justify-content: space-between; direction: rtl;">
+                        كراء مع سائق
+                        <span class="price">من 35 درهم/ساعة</span>
+                      </h3>
+                    <p>سائقون محترفون لنقلك إلى أي مكان براحة تامة.</p>
+                    <a href="#" class="btn">عرض السيارات</a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+    <div id="footer-placeholder"></div>
+    
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+    
+    <script>
+        // تغيير اللغة
+        function changeLanguage(lang) {
+            // هنا يمكنك إضافة كود تغيير اللغة الفعلي
+            // حالياً سنعرض رسالة فقط لأغراض العرض
+            const messages = {
+                'ar': 'سيتم تغيير اللغة إلى العربية',
+                'en': 'Language will be changed to English',
+                'fr': 'La langue sera changée en français',
+                'de': 'Sprache wird auf Deutsch geändert',
+                'es': 'El idioma cambiará al español'
+            };
+            
+            // تغيير نص الزر للغة المختارة
+            const langBtn = document.querySelector('.dropdown-btn');
+            const selectedLang = document.querySelector(`.dropdown-content a[onclick="changeLanguage('${lang}')"]`).textContent;
+            langBtn.innerHTML = selectedLang + ' <i class="fas fa-chevron-down"></i>';
+            
+            alert(messages[lang]);
+        }
+        
+        // زر العودة للأعلى
+        document.querySelector('.back-to-top').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+    </script>
+    <script src="loader.js"></script>
+</body>
+</html>
