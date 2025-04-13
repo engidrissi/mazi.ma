@@ -78,10 +78,9 @@
     <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
     
     <script>
-        // تغيير اللغة
+    
         function changeLanguage(lang) {
-            // هنا يمكنك إضافة كود تغيير اللغة الفعلي
-            // حالياً سنعرض رسالة فقط لأغراض العرض
+          
             const messages = {
                 'ar': 'سيتم تغيير اللغة إلى العربية',
                 'en': 'Language will be changed to English',
@@ -89,8 +88,7 @@
                 'de': 'Sprache wird auf Deutsch geändert',
                 'es': 'El idioma cambiará al español'
             };
-            
-            // تغيير نص الزر للغة المختارة
+
             const langBtn = document.querySelector('.dropdown-btn');
             const selectedLang = document.querySelector(`.dropdown-content a[onclick="changeLanguage('${lang}')"]`).textContent;
             langBtn.innerHTML = selectedLang + ' <i class="fas fa-chevron-down"></i>';
@@ -98,7 +96,6 @@
             alert(messages[lang]);
         }
         
-        // زر العودة للأعلى
         document.querySelector('.back-to-top').addEventListener('click', function(e) {
             e.preventDefault();
             window.scrollTo({top: 0, behavior: 'smooth'});
